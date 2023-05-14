@@ -5,6 +5,7 @@ public class ZombieAnimationsController : MonoBehaviour
 {
     private float _speed = 1.0f;
     private Animator _animator;
+    private static readonly int SpeedHash = Animator.StringToHash("Speed");
 
     private void Start()
     {
@@ -14,6 +15,6 @@ public class ZombieAnimationsController : MonoBehaviour
     private void Update()
     {
         float currentSpeed = GetComponent<Rigidbody>().velocity.magnitude;
-        _animator.SetFloat("Speed", currentSpeed * _speed);
+        _animator.SetFloat(SpeedHash, currentSpeed * _speed);
     }
 }

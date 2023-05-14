@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569552746e241854fab21f6123791765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 5026513949956637795, guid: 694c5b9f9be8d0941851320785904c16, type: 3}
+  _enemy: {fileID: -1500153117502612688, guid: 694c5b9f9be8d0941851320785904c16, type: 3}
   _enemySpawnerPosition:
   - {fileID: 1240363635}
   - {fileID: 485348476}

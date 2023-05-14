@@ -1,19 +1,20 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyMovement : MonoBehaviour
 {
     private NavMeshAgent _agent;
-    private Transform player;
+    private FirstPersonController playerController;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerController = FindObjectOfType<FirstPersonController>();
         _agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
     {
-            _agent.SetDestination(player.position);
+        _agent.SetDestination(playerController.transform.position);
     }
 }
